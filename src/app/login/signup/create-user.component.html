@@ -1,0 +1,50 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 400px; top: -137px;">
+        <h2 class="card-title text-center mb-4">Cafe Sign Up Form</h2>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" formControlName="name"
+                    placeholder="John">
+                <div *ngIf="signUpForm.get('name')?.invalid && signUpForm.get('name')?.touched"
+                    class="text-danger">
+                    Name is required.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="contactNumber" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="contact" formControlName="contactNumber"
+                    placeholder="+92 300 *******">
+                <div *ngIf="signUpForm.get('contactNumber')?.invalid && signUpForm.get('contactNumber')?.touched"
+                    class="text-danger">
+                    Contact Number is required.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email"
+                    placeholder="john@example.com">
+                <div *ngIf="signUpForm.get('email')?.errors && signUpForm.get('email')?.touched"
+                    class="text-danger">
+                    <div *ngIf="signUpForm.get('email')?.errors?.['required']"> Email is required</div>
+                    <div *ngIf="signUpForm.get('email')?.errors?.['email']"> Invalid email</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group">
+                    <input [type]="passwordFieldType" class="form-control" id="password" formControlName="password"
+                        placeholder="Enter your password">
+                    <button type="button" class="btn btn-outline-secondary" (click)="togglePasswordVisibility()">
+                        <i [ngClass]="passwordFieldType === 'password' ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                    </button>
+                </div>
+                <div *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched"
+                    class="text-danger">
+                    Password is required.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-custom btn-primary w-100" [disabled]="signUpForm.invalid">Sign Up</button>
+        </form>
+    </div>
+</div>

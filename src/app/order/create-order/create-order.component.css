@@ -1,0 +1,92 @@
+/* Main Container */
+.custom-container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Title Styling */
+.card-title {
+  color: #343a40;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Control Styling */
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Layout for Customer Form */
+.customer-form .row {
+  margin-bottom: 15px;
+}
+
+.customer-form .col {
+  margin-right: 15px;
+}
+
+/* Layout for Product Form */
+.product-form .row {
+  margin-bottom: 15px;
+}
+
+.product-form .col {
+  margin-right: 15px;
+}
+
+/* MatTable Styles */
+.mat-table {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 8px;
+}
+
+.mat-header-cell {
+  background-color: #e9ecef;
+}
+
+/* Button Styling */
+.btn-custom {
+  background-color: #0D6EFD;
+  color: white !important;
+  border-color: #0D6EFD;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+}
+
+/* .custom-btn{
+
+} */
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .card {
+      width: 100%;
+      padding: 10px;
+  }
+}

@@ -1,0 +1,156 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #0D6EFD;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+  /* Ensure the navbar stays on top */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #fefefe;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .brand-text {
+  margin-left: 10px;
+  /* Space between icon and text */
+}
+
+.nav-link {
+  color: #fefefe;
+}
+
+.nav-link:hover {
+  color: #fefefe;
+}
+
+.navbar .dropdown-menu {
+  border-radius: 0.25rem;
+  z-index: 1050;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.navbar .fas {
+  font-size: 1.2rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding-top: 60px;
+  /* Space for the navbar */
+  overflow-x: hidden;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar .nav-link {
+  color: #fefefe;
+  padding: 10px 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .nav-link .fas {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.sidebar .nav-link.active {
+  background-color: #fff;
+  color: #0D6EFD;
+  /* Ensure the active link color is visible */
+}
+
+.sidebar .nav-link:hover {
+  background-color: #0D6EFD;
+  color: #fff;
+}
+
+.sidebar .btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  /* Ensure the button is visible */
+}
+
+.sidebar .btn:focus {
+  outline: none;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.sidebar .collapsed .link-text {
+  display: none;
+}
+
+.content-container {
+  margin-left: 250px;
+  margin-top: 60px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar.collapsed~.content-container {
+  margin-left: 80px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 0;
+    z-index: 1000;
+  }
+
+  .sidebar.collapsed {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .content-container {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+
+  .sidebar.collapsed~.content-container {
+    margin-left: 0;
+  }
+
+  .sidebar .btn {
+    display: none;
+  }
+
+  .sidebar .nav-link .link-text {
+    display: inline;
+  }
+}

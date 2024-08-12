@@ -1,0 +1,77 @@
+<div
+  class="d-flex flex-column vh-100 p-3 bg-primary sidebar"
+  [ngClass]="{ collapsed: isCollapsed }"
+>
+  <!-- Toggle Button -->
+  <button
+    class="btn btn-outline-secondary mb-3"
+    (click)="toggleSidebar()"
+  >
+    <i [ngClass]="isCollapsed ? 'fas fa-chevron-right' : 'fas fa-chevron-left'"></i>
+  </button>
+
+  <!-- Links -->
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/dashboard"
+        routerLinkActive="active"
+      >
+        <i class="fas fa-tachometer-alt me-2"></i> <!-- Dashboard icon -->
+        <span *ngIf="!isCollapsed">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/manage-product"
+        routerLinkActive="active"
+      >
+        <i class="fas fa-boxes me-2"></i> <!-- Product icon -->
+        <span *ngIf="!isCollapsed">Manage Product</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/manage-category"
+        routerLinkActive="active"
+      >
+        <i class="fas fa-tags me-2"></i> <!-- Category icon -->
+        <span *ngIf="!isCollapsed">Manage Category</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/manage-order"
+        routerLinkActive="active"
+      >
+        <i class="fas fa-receipt me-2"></i> <!-- Order icon -->
+        <span *ngIf="!isCollapsed">Manage Order</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/view-bill"
+        routerLinkActive="active"
+      >
+        <i class="fas fa-file-invoice-dollar me-2"></i> <!-- Bill icon -->
+        <span *ngIf="!isCollapsed">View Bill</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/manage-user"
+        routerLinkActive="active"
+      >
+        <i class="fas fa-users me-2"></i> <!-- User icon -->
+        <span *ngIf="!isCollapsed">Manage User</span>
+      </a>
+    </li>
+  </ul>
+</div>
+

@@ -1,0 +1,102 @@
+/* Main Container */
+.container {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-left: -100px;
+    margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Removes unwanted margin */
+}
+
+/* Title Styling */
+.card-title {
+    color: #343a40;
+    font-weight: 600;
+}
+
+/* Button Styling */
+.btn-custom {
+    background-color: #0D6EFD;
+    color: white !important;
+    border-color: #0D6EFD;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #0D6EFD;
+}
+
+
+/* Signup Link */
+.signup {
+    margin-top: 10px;
+}
+
+.signup>a {
+    color: #0D6EFD;
+    text-decoration: none;
+}
+
+.signup>a:hover {
+    text-decoration: underline;
+}
+
+/* Form Control Styling */
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Input Group Styles */
+.input-group .form-control {
+    border-right: 0;
+}
+
+.input-group .btn {
+    border-left: 0;
+}
+.d-flex {
+    display: flex;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .close-button {
+    margin-left: auto;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  h3.card-title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+  }
+  
+
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .card {
+        width: 90%;
+    }
+}

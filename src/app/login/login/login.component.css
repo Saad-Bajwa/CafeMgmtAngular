@@ -1,0 +1,93 @@
+/* Container Styling */
+.container-fluid {
+    background-color: white;
+    min-height: 100vh; /* Ensures it covers the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Adds padding to prevent edges from touching */
+    margin-left: -150px;
+    margin-top: -100px;
+  }
+  
+  .card {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  /* Title Styling */
+  .card-title {
+    color: #0D6EFD; /* Dark grey color for the title */
+    font-weight: 600; /* Bold the title */
+  }
+  
+  /* Button Styling */
+  .btn-custom {
+    background-color: #0D6EFD; /* Primary button color */
+    color: white !important; /* White text */
+    border-color: #0D6EFD; /* Matches the button color */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Button Hover Effect */
+  .btn-custom:hover {
+    background-color: #0D6EFD; /* Darker green on hover */
+  }
+  
+  /* Forgot Password Link Styling */
+  .forgot-password a {
+    color: #0D6EFD; /* Link color */
+    transition: text-decoration 0.2s; /* Smooth transition */
+  }
+  
+  /* Hover Effect for Forgot Password Link */
+  .forgot-password > a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Signup Section Styling */
+  .signup {
+    margin-top: 10px; /* Adds space between sections */
+  }
+  
+  /* Signup Link Styling */
+  .signup > a {
+    color: #0D6EFD; /* Link color */
+    text-decoration: none; /* Removes underline */
+    transition: text-decoration 0.2s; /* Smooth transition */
+  }
+  
+  /* Hover Effect for Signup Link */
+  .signup > a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Input Styling */
+  .form-control {
+    border-radius: 5px; /* Rounded input */
+    padding: 10px; /* Consistent padding */
+    font-size: 1rem; /* Uniform font size */
+  }
+  
+  /* Input Group Styling */
+  .input-group .form-control {
+    border-right: 0; /* No right border for the input */
+  }
+  
+  /* Input Group Button Styling */
+  .input-group .btn {
+    border-left: 0; /* No left border for the button */
+  }
+  .btn{
+    border-color: #dee2e6;
+  }
+  
+  /* Ensures responsive display on small devices */
+  @media (max-width: 576px) {
+    .card {
+      width: 90%; /* Full width on small screens */
+    }
+  }
+  
+  

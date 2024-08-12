@@ -1,0 +1,98 @@
+<nav *ngIf="showNavbar" class="navbar navbar-expand-lg navbar-primary bg-primary shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fas fa-coffee fa-2x"></i>
+      <span class="brand-text">Cafe Management System</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            href="#"
+            id="navbarDropdown"
+            onclick="onLogout()"
+          >
+          <i class="material-icons">logout</i>
+          </a>
+          <!-- <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#" (click)="onLogout()">Logout</a>
+            </li>
+          </ul> -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="d-flex">
+  <div *ngIf="showNavbar" class="d-flex flex-column vh-100 p-3 bg-primary sidebar" [ngClass]="{ collapsed: isCollapsed }">
+    <!-- Toggle Button -->
+    <button class="btn btn-outline-secondary mb-3" (click)="toggleSidebar()">
+      <i [ngClass]="isCollapsed ? 'fas fa-chevron-right' : 'fas fa-chevron-left'"></i>
+    </button>
+
+    <!-- Links -->
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item" *ngIf="role === 'admin' || role === 'user'">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+          <i class="fas fa-tachometer-alt me-2"></i>
+          <span class="link-text" *ngIf="!isCollapsed">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="role === 'admin'">
+        <a class="nav-link" routerLink="/category/list" routerLinkActive="active">
+          <i class="fas fa-tags me-2"></i>
+          <span class="link-text" *ngIf="!isCollapsed">Manage Category</span>
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="role === 'admin'">
+        <a class="nav-link" routerLink="/product/list" routerLinkActive="active">
+          <i class="fas fa-boxes me-2"></i>
+          <span class="link-text" *ngIf="!isCollapsed">Manage Product</span>
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="role === 'admin'">
+        <a class="nav-link" routerLink="/manageOrder" routerLinkActive="active">
+          <i class="fas fa-receipt me-2"></i>
+          <span class="link-text" *ngIf="!isCollapsed">Manage Order</span>
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="role === 'user'">
+        <a class="nav-link" routerLink="/placeOrder" routerLinkActive="active">
+          <i class="fas fa-receipt me-2"></i>
+          <span class="link-text" *ngIf="!isCollapsed">Place Order</span>
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="role === 'admin' || role === 'user'">
+        <a class="nav-link" routerLink="/viewBill" routerLinkActive="active">
+          <i class="fas fa-file-invoice-dollar me-2"></i>
+          <span class="link-text" *ngIf="!isCollapsed">View Bill</span>
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="role === 'admin'">
+        <a class="nav-link" routerLink="/user/list" routerLinkActive="active">
+          <i class="fas fa-users me-2"></i>
+          <span class="link-text" *ngIf="!isCollapsed">Manage User</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content-container flex-grow-1">
+    <router-outlet></router-outlet>
+  </div>
+</div>

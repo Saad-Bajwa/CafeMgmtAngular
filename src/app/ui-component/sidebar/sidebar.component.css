@@ -1,0 +1,57 @@
+.sidebar {
+    width: 250px; /* Sidebar width */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 60px; /* Space for the navbar */
+    overflow-x: hidden; /* Hide overflow */
+  }
+  
+  .sidebar.collapsed {
+    width: 80px; /* Collapsed width */
+  }
+  
+  .sidebar .nav-link {
+    color: #fefefe; /* Text color */
+    padding: 10px 15px; /* Padding */
+    font-size: 1rem; /* Font size */
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .nav-link .fas {
+    font-size: 1.2rem; /* Icon size */
+    margin-right: 10px; /* Spacing between icon and text */
+  }
+  
+  .sidebar .nav-link.active {
+    background-color: #fff; /* Active link background */
+    color: #fff; /* Active link text color */
+  }
+
+  
+  
+  .sidebar .nav-link:hover {
+    background-color: #0D6EFD; /* Hover effect */
+  }
+  
+  .sidebar .btn {
+    background-color: transparent; /* Transparent button */
+    border: none; /* No border */
+    outline: none; /* No outline */
+  }
+  
+  .sidebar .btn:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  .vh-100 {
+    height: 100vh; /* Full height */
+  }
+  
+  .sidebar .collapsed .nav-link span {
+    display: none; /* Hide text when collapsed */
+  }
+  

@@ -1,0 +1,11 @@
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .chart-card {
+    width: 45%;
+    min-width: 300px;
+  }
+  
